@@ -19,9 +19,12 @@
     "gatsby": "^4.2.0",
     "gatsby-plugin-netlify-cms": "^6.2.0",
     "gatsby-plugin-styled-components": "^5.2.0",
+    "gatsby-source-graphql": "^4.2.0",
     "netlify-cms-app": "^2.15.59",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-slick": "^0.28.1",
+    "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.3"
   }
 }
