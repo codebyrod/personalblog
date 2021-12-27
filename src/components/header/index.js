@@ -1,6 +1,7 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import * as S from './style'
+import { Link } from 'gatsby'
 
 export function Header() {
 
@@ -28,21 +29,23 @@ export function Header() {
     }
     `)
 
-    const {btnbio, btncodigos, btncontato, imgLogo, imgSlide1, imgSlide2, imgSlide3} = data.alldata.headers[0]
+    const {btnbio, btncodigos, btncontato, imgLogo} = data.alldata.headers[0]
     return (
         <S.Container>
             <S.Box>
                 <S.BoxImg>
+                    <Link to="/">
                     <img src={imgLogo.url} />
+                    </Link>
                 </S.BoxImg>
                 <S.BoxBtn>
                     <button>{btncodigos}</button>
                     <button>{btnbio}</button>
                     <button>{btncontato}</button>
                 </S.BoxBtn>
-                <S.BoxNoturnMode>
+                {/* <S.BoxNoturnMode>
                     <button>MN</button>
-                </S.BoxNoturnMode>
+                </S.BoxNoturnMode> */}
             </S.Box>
                 <S.BoxSlide>
                     <h3>slide</h3>

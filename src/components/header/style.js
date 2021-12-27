@@ -46,7 +46,7 @@ button{
 }
 `
 
-export const BoxNoturnMode = styled.div`
+/* export const BoxNoturnMode = styled.div`
 width: 7vw;
 display: flex;
 align-items: center;
@@ -69,7 +69,7 @@ button{
         transition: 200ms;
     }
 }
-`
+` */
 
 export const BoxSlide = styled.div`
 height: 30vw;

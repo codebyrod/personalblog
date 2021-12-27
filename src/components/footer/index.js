@@ -1,5 +1,6 @@
 import { graphql, useStaticQuery } from 'gatsby'
 import React from 'react'
+import { Link } from 'gatsby'
 import * as S from "./style"
 
 export function Footer() {
@@ -17,12 +18,15 @@ export function Footer() {
                   imgLinkedin {
                     url
                   }
+                  imgCoracao{
+                      url
+                  }
             }
         }
     }
     `)
 
-    const {imgGithub, imgInstagram, imgLinkedin} = data.alldata.footers[0]
+    const {imgGithub, imgInstagram, imgLinkedin, imgCoracao} = data.alldata.footers[0]
 
     return (
         <S.Container>
@@ -32,30 +36,36 @@ export function Footer() {
                 <button>Bio</button>
             </S.BoxBtn>
             <S.BoxCodes>
-                <button>Uloax Taxi</button>
-                <button>Harry Potter</button>
-                <button>Shopping Car</button>
-                <button>Homeverse</button>
-                <button>Star Wars</button>
-                <button>Berk</button>
+                <S.BtnCodes to='/taxi'> Uloax Taxi</S.BtnCodes>
+                <S.BtnCodes to='/harrypotter'>Harry Potter</S.BtnCodes>
+                <S.BtnCodes to='/shoppingcar'>Shopping Car</S.BtnCodes>
+                <S.BtnCodes to='/homeverse'>Homeverse</S.BtnCodes>
+                <S.BtnCodes to='/starwars'>Star Wars</S.BtnCodes>
+                <S.BtnCodes to='/berk'>Berk</S.BtnCodes>
             </S.BoxCodes>
             <S.BoxSocial>
                 <h3>Um bora nos conectar?</h3>
                 <S.BoxLogos>
+                    <Link to='https://www.linkedin.com/in/codebyrod/'>
                     <div>
                         <img src={imgLinkedin.url} />
                     </div>
+                    </Link>
+                    <Link to='https://github.com/codebyrod'>
                     <div>
                         <img src={imgGithub.url} />
                     </div>
+                    </Link>
+                    <Link to='https://www.instagram.com/codebyrod/'>
                     <div>
                         <img src={imgInstagram.url} />
                     </div>
+                    </Link>
                 </S.BoxLogos>
             </S.BoxSocial>
-            <S.BoxAssinature>
-                <p>desenvolvido com <span><img src="https://imagepng.org/wp-content/uploads/2017/10/coracao.png" /></span> por <span>@codebyrod</span></p>
-            </S.BoxAssinature>
+            <S.BoxSignature>
+                <p>desenvolvido com <span><img src={imgCoracao.url} /></span> por <S.Signature to ='https://linktr.ee/codebyrod'>@codebyrod</S.Signature></p>
+            </S.BoxSignature>
         </S.Container>
     )
 }

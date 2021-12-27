@@ -1,5 +1,6 @@
 import React from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
+import { graphql, useStaticQuery, Link} from 'gatsby'
+import { Bio } from './bio'
 import * as S from './style'
 
 export function Main() {
@@ -7,6 +8,9 @@ export function Main() {
     query{
         alldata{
             mains{
+                imgBio{
+                    url
+                }
                 imgBerk {
                     url
                 }
@@ -25,31 +29,28 @@ export function Main() {
                 imgTaxi {
                     url
                 }
-                imgToDoHooks {
-                    url
-                }
                 titleTaxi
+                txtBio
                 txtTaxi
             }
         }
     }
     `)
 
-    const {imgBerk,
+    const {
+    imgBerk,
     imgHarryPotter,
     imgHomeverse,
     imgShoppingCar,
     imgStarWars,
     imgTaxi,
-    imgToDoHooks,
     titleTaxi,
     txtTaxi} = data.alldata.mains[0]
+ 
 
+   
     return (
         <S.Container>
-            <S.Box>
-                <p>Div de texto</p>
-            </S.Box>
             <S.ContainerCard>
             <S.BoxCard>
                 <S.Card>
@@ -59,11 +60,13 @@ export function Main() {
                             <p>{txtTaxi}</p>
                         </S.BoxTxt>
                         <S.BoxImg>
-                            <img src={imgTaxi.url} />
+                            {/* <Link to='https://competent-payne-72fcf9.netlify.app/'> */}
+                            <S.ImgTaxi src={imgTaxi.url}/>
+                           {/*  </Link> */}
                         </S.BoxImg>
                     </S.BoxTop>
                     <S.BoxButton>
-                        <button>Ver Mais</button>
+                        <S.Btn to='/taxi'>Mais Detalhes</S.Btn>
                     </S.BoxButton>
                 </S.Card>
             </S.BoxCard>
@@ -72,14 +75,14 @@ export function Main() {
                     <S.BoxTop>
                         <S.BoxTxt>
                             <h4>Harry Potter</h4>
-                            <p>Para o projeto usamos GraphCms, Gatsby, Graphql, Styled Components, React, consumo de API’s.</p>
+                            <p>{txtTaxi}</p>
                         </S.BoxTxt>
                         <S.BoxImg>
-                            <img src={imgHarryPotter.url} />
+                            <S.ImgHarryPotter src={imgHarryPotter.url} />
                         </S.BoxImg>
                     </S.BoxTop>
                     <S.BoxButton>
-                        <button>Ver Mais</button>
+                        <S.Btn to='/harrypotter'>Mais Detalhes</S.Btn>
                     </S.BoxButton>
                 </S.Card>
             </S.BoxCard>
@@ -88,14 +91,14 @@ export function Main() {
                     <S.BoxTop>
                         <S.BoxTxt>
                             <h4>Shopping Car</h4>
-                            <p>Para o projeto usamos props dentro de Styled Components, React e Consumo de API's.</p>
+                            <p>{txtTaxi}</p>
                         </S.BoxTxt>
                         <S.BoxImg>
-                            <img src={imgShoppingCar.url} />
+                            <S.imgShoppingCar src={imgShoppingCar.url} />
                         </S.BoxImg>
                     </S.BoxTop>
                     <S.BoxButton>
-                        <button>Ver Mais</button>
+                        <S.Btn to='/shoppingcar'>Mais Detalhes</S.Btn>
                     </S.BoxButton>
                 </S.Card>
             </S.BoxCard>
@@ -103,15 +106,15 @@ export function Main() {
                 <S.Card>
                     <S.BoxTop>
                         <S.BoxTxt>
-                            <h4>Homeverse</h4>
-                            <p>Para o projeto usamos props em Styled Components, React e Consumo de API’s.</p>
+                            <h4>HomeVerse</h4>
+                            <p>{txtTaxi}</p>
                         </S.BoxTxt>
                         <S.BoxImg>
-                            <img src={imgHomeverse.url} />
+                            <S.ImgHomeVerse src={imgHomeverse.url} />
                         </S.BoxImg>
                     </S.BoxTop>
                     <S.BoxButton>
-                        <button>Ver Mais</button>
+                        <S.Btn to='/homeverse'>Mais Detalhes</S.Btn>
                     </S.BoxButton>
                 </S.Card>
             </S.BoxCard>
@@ -120,14 +123,14 @@ export function Main() {
                     <S.BoxTop>
                         <S.BoxTxt>
                             <h4>Star Wars</h4>
-                            <p>Projeto em HTML e CSS. Estudando Position, Z-index, Hover e Responsividade.</p>
+                            <p>{txtTaxi}</p>
                         </S.BoxTxt>
                         <S.BoxImg>
-                            <img src={imgStarWars.url} />
+                            <S.ImgStarWars src={imgStarWars.url} />
                         </S.BoxImg>
                     </S.BoxTop>
                     <S.BoxButton>
-                        <button>Ver Mais</button>
+                        <S.Btn to='/starwars'>Mais Detalhes</S.Btn>
                     </S.BoxButton>
                 </S.Card>
             </S.BoxCard>
@@ -136,18 +139,27 @@ export function Main() {
                     <S.BoxTop>
                         <S.BoxTxt>
                             <h4>Berk</h4>
-                            <p>Projeto em HTML e CSS. Estudando Display Flex, Hover e Responsividade.</p>
+                            <p>{txtTaxi}</p>
                         </S.BoxTxt>
                         <S.BoxImg>
-                            <img src={imgBerk.url} />
+                            <S.ImgBerk src={imgBerk.url} />
                         </S.BoxImg>
                     </S.BoxTop>
                     <S.BoxButton>
-                        <button>Ver Mais</button>
+                        <S.Btn to='/berk'>Mais Detalhes</S.Btn>
                     </S.BoxButton>
                 </S.Card>
             </S.BoxCard>
             </S.ContainerCard>
+            <Bio />
+           {/* <S.ContainerBio>
+                <S.BoxBio>
+                    <p>{txtBio}</p>
+                </S.BoxBio>
+                <S.FigureBio>
+                    <img src={imgBio.url} />
+                </S.FigureBio>
+            </S.ContainerBio> */}
         </S.Container>
-    )
+    ) 
 }
