@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import * as S from './style'
 import { Link } from 'gatsby'
+import { SimpleSlider } from './simpleslider'
 
 export function Header() {
 
@@ -27,9 +28,10 @@ export function Header() {
             }
         }
     }
-    `)
+`)
 
     const {btnbio, btncodigos, btncontato, imgLogo} = data.alldata.headers[0]
+    
     return (
         <S.Container>
             <S.Box>
@@ -47,9 +49,7 @@ export function Header() {
                     <button>MN</button>
                 </S.BoxNoturnMode> */}
             </S.Box>
-                <S.BoxSlide>
-                    <h3>slide</h3>
-                </S.BoxSlide>
+            <SimpleSlider />
         </S.Container>
     )
 }

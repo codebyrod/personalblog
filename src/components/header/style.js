@@ -74,6 +74,53 @@ button{
 export const BoxSlide = styled.div`
 height: 30vw;
 background-color: #D3FFCE;
+`
 
+export const FirstSlide = styled.div`
+display: flex;
+
+background-color: #333333;
+align-items: center;
+height: 37vw;
+justify-content: space-around;
+
+`
+export const BoxTxt = styled.div`
+background-color: #FFB102;
+width: 40%;
+height: 50%;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+justify-content: center;
+padding: 2rem;
+
+h3{
+    color: #333333;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+p{
+    color: #333333;
+    height: 30%;
+    line-height: 1.5rem;
+}
+`
+
+export const BoxImgSlide = styled.div`
+display: flex;
+align-items: center;
+width: 50%;
+height: 100%;
+
+img{
+    width: 90%;
+
+    &:hover{
+        width: 100%;
+        transition: 200ms;
+    }
+}
 `
 
