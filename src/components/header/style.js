@@ -1,5 +1,4 @@
 import styled from "styled-components";
-
 export const Container = styled.div` 
 
 `
@@ -76,14 +75,20 @@ height: 30vw;
 background-color: #D3FFCE;
 `
 
-export const FirstSlide = styled.div`
+export const SlideTaxi = styled.div`
 display: flex;
-
 background-color: #333333;
 align-items: center;
 height: 37vw;
 justify-content: space-around;
+`
 
+export const Slide = styled.div`
+display: flex;
+background-color: #333333;
+align-items: center;
+height: 37vw;
+justify-content: space-around;
 `
 export const BoxTxt = styled.div`
 background-color: #FFB102;
@@ -115,12 +120,14 @@ width: 50%;
 height: 100%;
 
 img{
-    width: 90%;
+    width: 80%;
 
     &:hover{
-        width: 100%;
+        width: 90%;
         transition: 200ms;
     }
 }
 `
+
+
 

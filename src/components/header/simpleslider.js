@@ -48,7 +48,7 @@ const {imgSlideBerk, imgSlideHarrypotter, imgSlideHomeverse, imgSlideShoppingCar
       <div style={{overflowX: 'hidden'}}>
         <Slider {...settings}>
             <div>
-                <S.FirstSlide>
+                <S.Slide>
                     <S.BoxTxt>
                         <h3>Projeto Uloax Taxi</h3>
                         <p>Produção de uma landing page, projeto usando Gatsby, GraphCMS, ReactSlick. Desafio realizado no módulo 3 da edtech Vai na Web.</p>
@@ -58,72 +58,72 @@ const {imgSlideBerk, imgSlideHarrypotter, imgSlideHomeverse, imgSlideShoppingCar
                         <img src={imgSlideTaxi.url} />
                         </Link>
                     </S.BoxImgSlide>
-                </S.FirstSlide>
+                </S.Slide>
             </div>
             <div>
-                <S.FirstSlide>
+                <S.Slide>
                     <S.BoxTxt>
                         <h3>Projeto Harry Potter</h3>
-                        <p>Produção de uma landing page, projeto usando Gatsby, GraphCMS, ReactSlick. Desafio realizado no módulo 3 da edtech Vai na Web.</p>
+                        <p>Projeto onstruído com React, nesse projeto usamos consumo de API via axios e  usamos as rotas via Gatsby Link</p>
                     </S.BoxTxt>
                     <S.BoxImgSlide>
                         <Link to="/harrypotter">
                         <img src={imgSlideHarrypotter.url} />
                         </Link>
                     </S.BoxImgSlide>
-                </S.FirstSlide>
+                </S.Slide>
             </div>
             <div>
-                <S.FirstSlide>
+                <S.Slide>
                     <S.BoxTxt>
                         <h3>Projeto Shopping Car</h3>
-                        <p>Produção de uma landing page. Desafio realizado no módulo 2 da edtech Vai na Web.</p>
+                        <p>Desafio final realizado no módulo 2 da edtech Vai na Web. </p>
                     </S.BoxTxt>
                     <S.BoxImgSlide>
                         <Link to="/shoppingcar">
                         <img src={imgSlideShoppingCar.url} />
                         </Link>
                     </S.BoxImgSlide>
-                </S.FirstSlide>
+                </S.Slide>
             </div>
             <div>
-                <S.FirstSlide>
+                <S.Slide>
                     <S.BoxTxt>
                         <h3>Projeto Homeverse</h3>
-                        <p>Produção de uma landing page. Desafio realizado no módulo 2 da edtech Vai na Web.</p>
+                        <p>Produção de uma landing page. Desafio realizado no módulo 2 da edtech Vai na Web. O Desafio consistiu em consumir dados a partir de uma API pública.</p>
                     </S.BoxTxt>
                     <S.BoxImgSlide>
                         <Link to="/homeverse">
                         <img src={imgSlideHomeverse.url} />
                         </Link>
                     </S.BoxImgSlide>
-                </S.FirstSlide>
+                </S.Slide>
             </div>
             <div>
-                <S.FirstSlide>
+                <S.Slide>
                     <S.BoxTxt>
-                        <h3>Projeto Homeverse</h3>
-                        <p>Produção de uma landing page. Desafio realizado no módulo 2 da edtech Vai na Web.</p>
+                        <h3>Projeto Star Wars</h3>
+                        <p>Projeto realizado para o desafio final do módulo 1 da edtech Vai na Web.</p>
                     </S.BoxTxt>
                     <S.BoxImgSlide>
                         <Link to="/starwars">
                         <img src={imgSlideStarwars.url} />
                         </Link>
                     </S.BoxImgSlide>
-                </S.FirstSlide>
+                </S.Slide>
             </div>
             <div>
-                <S.FirstSlide>
+                <S.Slide>
                     <S.BoxTxt>
-                        <h3>Projeto Homeverse</h3>
-                        <p>Produção de uma landing page. Desafio realizado no módulo 2 da edtech Vai na Web.</p>
+                        <h3>Projeto Berk</h3>
+                        <p>Projeto com foco na participação de processo seletivo, realizado próximo do final do módulo 1. Um aspecto importante trabalhado foi a responsividade.</p>
                     </S.BoxTxt>
                     <S.BoxImgSlide>
                         <Link to="/berk">
                         <img src={imgSlideBerk.url} />
                         </Link>
                     </S.BoxImgSlide>
-                </S.FirstSlide>
+                </S.Slide>
             </div>
         </Slider>
       </div>
